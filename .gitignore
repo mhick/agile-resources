@@ -77,3 +77,5 @@ typings/
 
 # Build Files
 public/
+public/index.html
+public/render-page.js.map
