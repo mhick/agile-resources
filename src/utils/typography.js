@@ -1,6 +1,6 @@
 import Typography from 'typography'
-import lincolnTheme from 'typography-theme-lincoln'
+import stAnnesTheme from 'typography-theme-st-annes'
 
-const typography = new Typography(lincolnTheme)
+const typography = new Typography(stAnnesTheme)
 
 export default typography
