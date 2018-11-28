@@ -1,0 +1,12 @@
+- value: 1
+  greaterValue: Individuals and interactions
+  lesserValue: processes and tools
+- value: 2
+  greaterValue: Working software
+  lesserValue: comprehensive documentation
+- value: 3
+  greaterValue: Customer collaboration
+  lesserValue: contract negotiation
+- value: 4
+  greaterValue: Responding to change
+  lesserValue: following a plan
