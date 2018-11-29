@@ -26,22 +26,34 @@ const IndexPage = ({ data }) => (
       That is, while there is value in the items on the right, we value the
       items on the left more.
     </p>
-    <Link to="/page-2/">Go to page 2</Link>
+    <ul>
+    {data.allSignersYaml.edges.map(({ node }, index) => (
+        <li>{node.name}</li>
+      ))}
+    </ul>
+    <Link to="/principles/">Twelve Principles of Agile Software</Link>
   </Layout>
 )
 
 export const query = graphql`
-  query ValuesQuery {
-    allValuesYaml {
-      edges {
-        node {
-          value
-          greaterValue
-          lesserValue
-        }
-      }
+query HomePageQuery {
+  allSignersYaml {
+  edges {
+    node {
+      id
+      name
     }
   }
+}
+allValuesYaml {
+  edges {
+    node {
+      id
+      greaterValue
+      lesserValue
+    }
+  }
+}}
 `
 
 export default IndexPage
