@@ -2,17 +2,13 @@ import React from 'react'
 import { Link } from 'gatsby'
 
 const Header = ({ siteTitle }) => (
-  <div>
-    <div>
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-        >
-          {siteTitle}
-        </Link>
-      </h1>
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <Link to="/" className="navbar-item is-size-3">
+        {siteTitle}
+      </Link>
     </div>
-  </div>
+  </nav>
 )
 
 export default Header
