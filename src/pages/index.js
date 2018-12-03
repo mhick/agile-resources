@@ -8,8 +8,12 @@ import Signers from '../components/signers'
 const IndexPage = ({ data }) => (
   <Layout>
     <section className="section">
-      <Manifesto values={data.allValuesYaml.edges}></Manifesto>
-      <Signers signers={data.allSignersYaml.edges}></Signers>
+      <Manifesto values={data.allValuesYaml.edges} />
+      <div className="section">
+        <Signers signers={data.allSignersYaml.edges} />
+      </div>
+    </section>
+    <section className="section">
       <Link to="/principles/">Twelve Principles of Agile Software</Link>
     </section>
   </Layout>

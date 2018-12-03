@@ -1,12 +1,18 @@
 import React from 'react'
 
-const Signers = ({ signers }) => ( 
+const Signers = ({ signers }) => (
   <div className="container">
-      <ul>
-        {signers.map(({ node }, index) => (
-          <li>{node.name}</li>
-        ))}
-      </ul>
+    <div className="columns is-multiline">
+      {signers.map(({ node }, index) => (
+        <div className="column is-one-third">
+          <div className="card">
+            <div className="card-content">
+              <p className="title is-5">{node.name}</p>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
   </div>
 )
 
