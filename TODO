@@ -1,10 +1,16 @@
 
 General:
-  ☐ Add CSS Framework
+  [x] Add CSS Framework
   [] Choose license
   [] Update README
 
 Components:
   [] Author
   [] Resource
+  [x] Manifesto
+  [] Principles
+
+Styling:
+  [] Manifesto values
+  [] Principles (bulma tiles?)
 
