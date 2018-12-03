@@ -3,9 +3,14 @@ General:
   [x] Add CSS Framework
   [] Choose license
   [] Update README
+    - purpose
+    - ecosystem
 
 Components:
   [] Author
+    [] Website
+    [] Twitter
+    [] AMZN page 
   [] Resource
   [x] Manifesto
   [] Principles
@@ -13,4 +18,11 @@ Components:
 Styling:
   [] Manifesto values
   [] Principles (bulma tiles?)
+
+Function:
+  [] Query resources by value
+  [] Query resources by principle
+  [] Query resources by label
+  [] Amazon affiliate link
+
 
