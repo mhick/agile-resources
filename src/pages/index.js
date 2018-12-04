@@ -29,6 +29,7 @@ export const query = graphql`
           twitter
           website
           amazon
+          wikipedia
         }
       }
     }

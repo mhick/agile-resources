@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'gatsby'
 
 const Signers = ({ signers }) => (
   <div className="container">
@@ -14,6 +13,7 @@ const Signers = ({ signers }) => (
                   <a
                     href={'https://twitter.com/' + node.twitter}
                     target="_blank"
+                    rel="noopener noreferrer"
                   >
                     @{node.twitter}
                   </a>
@@ -21,14 +21,21 @@ const Signers = ({ signers }) => (
               )}
               {node.website && (
                 <p>
-                  <a href={node.website} target="_blank">
+                  <a href={node.website} target="_blank" rel="noopener noreferrer">
                     Website
+                  </a>
+                </p>
+              )}
+              {node.wikipedia && (
+                <p>
+                  <a href={node.wikipedia} target="_blank" rel="noopener noreferrer">
+                    Wikipedia
                   </a>
                 </p>
               )}
               {node.amazon && (
                 <p>
-                  <a href={node.amazon} target="_blank">
+                  <a href={node.amazon} target="_blank" rel="noopener noreferrer">
                     Amazon Author Page
                   </a>
                 </p>
