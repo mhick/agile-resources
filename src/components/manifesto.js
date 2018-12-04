@@ -4,7 +4,8 @@ const Manifesto = ({ values }) => (
   <div className="container">
     <h1 className="title">Manifesto for Agile Software Development</h1>
     <h2 className="subtitle">
-      Reprinted from <a href="https://agilemanifesto.org">AgileManifesto.org</a>.
+      Reprinted from <a href="https://agilemanifesto.org">AgileManifesto.org</a>
+      .
     </h2>
     <div className="box is-size-5">
       <p>
@@ -14,16 +15,13 @@ const Manifesto = ({ values }) => (
       <p>Through this work we have come to value:</p>
       <div className="section">
         {values.map(({ node }, index) => (
-          <div className="level" key={node.index}>
-            <div className="level-left">
-              <div className="level-item">
-                <strong>{node.greaterValue}</strong>
+              <div className="level" key={node.index}>
+                <div className="level-left">
+                  <strong>{node.greaterValue}</strong> over {node.lesserValue}
+                </div>
+                <div className="level-right is-size-6">Resources</div>
               </div>
-            </div>
-            <div className="level-right">
-              <div className="level-item">over {node.lesserValue}</div>
-            </div>
-          </div>
+
         ))}
       </div>
       <p>
