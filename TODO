@@ -3,14 +3,30 @@ General:
   [x] Add CSS Framework
   [] Choose license
   [] Update README
+    - purpose
+    - ecosystem
 
 Components:
   [] Author
+    [] Website
+    [] Twitter
+    [] AMZN page 
   [] Resource
   [x] Manifesto
   [] Principles
 
 Styling:
   [] Manifesto values
+    - Bullet journal style? Handwriting or chalkboard type fonts
   [] Principles (bulma tiles?)
 
+Function:
+  [] Query resources by value
+  [] Query resources by principle
+  [] Query resources by label
+  [] Amazon affiliate link
+
+Data:
+  [] Create Author/Signer schema
+  [] Set up YAML validation
+  [] Feed amazon affiliate code to amazon links
