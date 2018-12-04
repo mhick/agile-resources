@@ -26,6 +26,9 @@ export const query = graphql`
         node {
           id
           name
+          twitter
+          website
+          amazon
         }
       }
     }

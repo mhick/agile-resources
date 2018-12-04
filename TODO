@@ -17,6 +17,7 @@ Components:
 
 Styling:
   [] Manifesto values
+    - Bullet journal style? Handwriting or chalkboard type fonts
   [] Principles (bulma tiles?)
 
 Function:
@@ -25,4 +26,7 @@ Function:
   [] Query resources by label
   [] Amazon affiliate link
 
-
+Data:
+  [] Create Author/Signer schema
+  [] Set up YAML validation
+  [] Feed amazon affiliate code to amazon links
