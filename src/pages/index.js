@@ -1,22 +1,36 @@
 import React from 'react'
+import { render } from 'react-dom'
 import { Link, graphql } from 'gatsby'
+import { Router } from '@reach/router'
+import 'bulma/css/bulma.css'
 
 import Layout from '../components/layout'
 import Manifesto from '../components/manifesto'
 import Signers from '../components/signers'
+import Principles from './principles'
 
-const IndexPage = ({ data }) => (
+const App = ({ children }) => <Layout children={children} />
+
+const Home = ({ data }) => (
   <Layout>
     <section className="section">
       <Manifesto values={data.allValuesYaml.edges} />
       <div className="section">
         <Signers signers={data.allSignersYaml.edges} />
       </div>
-    </section>
-    <section className="section">
-      <Link to="/principles/">Twelve Principles of Agile Software</Link>
+      <Link to="principles">Twelve Principles of Agile Software</Link>
     </section>
   </Layout>
+)
+
+render(
+  <Router>
+    <App path="/">
+      <Home path="/" />
+      <Principles path="principles" />
+    </App>
+  </Router>,
+  document.getElementById('___gatsby')
 )
 
 export const query = graphql`
@@ -45,4 +59,4 @@ export const query = graphql`
   }
 `
 
-export default IndexPage
+export default Home

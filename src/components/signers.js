@@ -4,7 +4,7 @@ const Signers = ({ signers }) => (
   <div className="container">
     <div className="columns is-multiline">
       {signers.map(({ node }, index) => (
-        <div className="column is-one-third">
+        <div className="column is-one-third" key={node.id}>
           <div className="card">
             <div className="card-content">
               <p className="is-size-5 has-text-weight-semibold">{node.name}</p>
