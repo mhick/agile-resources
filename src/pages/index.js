@@ -8,7 +8,7 @@ import Layout from '../components/layout'
 import Manifesto from '../components/manifesto'
 import Signers from '../components/signers'
 import Principles from './principles'
-import ValueResources from './values'
+import Value from './values'
 
 const App = ({ children }) => <Layout children={children} />
 
@@ -24,12 +24,15 @@ const Home = ({ data }) => (
   </Layout>
 )
 
+// TODO: Do I even need @reach/router? 
 render(
   <Router>
     <App path="/">
       <Home path="/" />
       <Principles path="principles" />
-      <ValueResources path="values/:valueId" />
+      <Value path="values">
+        <Value path=":valueId" />
+      </Value>
     </App>
   </Router>,
   document.getElementById('___gatsby')

@@ -8,9 +8,9 @@ import { Link, graphql } from 'gatsby'
 
 import Layout from '../components/layout'
 
-const ValueResources = ({ data }) => (
+const Value = ({ props, data }) => (
   <Layout>
-    <h1>Resources</h1>
+    <h1>Value {props.valueId}</h1>
     {data.values.edges.map(({ node }, index) => (
         <p key={node.id}>{node.greaterValue}</p>
       ))}
@@ -53,4 +53,4 @@ query ResourceQuery($searchValue: Int = 1)
 }
 `
 
-export default ValueResources
+export default Value
