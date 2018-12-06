@@ -8,14 +8,14 @@ import Layout from '../components/layout'
 
 const Resources = ({ data }) => (
   <Layout>
-    <h1>Twelve Principles of Agile Software</h1>
+    <h1>Resources</h1>
     <p>
       Reprinted from <a href="https://agilemanifesto.org">AgileManifesto.org</a>
       .
     </p>
     <ol>
-      {data.allPrinciplesYaml.edges.map(({ node }, index) => (
-        <li key={node.id}>{node.text}</li>
+      {data.allResourcesYaml.edges.map(({ node }, index) => (
+        <li key={node.id}>{node.name}</li>
       ))}
     </ol>
     <Link to="/">Return to Agile Manifesto</Link>
@@ -24,11 +24,18 @@ const Resources = ({ data }) => (
 
 export const query = graphql`
   query ResourceQuery {
-    allPrinciplesYaml {
+    allResourcesYaml(filter: { values: { in: [1] } }) {
       edges {
         node {
           id
-          text
+          name
+          author {
+            family
+            given
+          }
+          url
+          values
+          principles
         }
       }
     }
