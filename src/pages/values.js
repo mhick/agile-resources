@@ -1,12 +1,14 @@
-// TODO: Query for resources matching values and principles
 // TODO: Display resources as cards
+// TODO: Style value
+// TODO: insert value variable into page context
+// TODO: create route for resources e.g. `/resources/value/:value`
 
 import React from 'react'
 import { Link, graphql } from 'gatsby'
 
 import Layout from '../components/layout'
 
-const Resources = ({ data }) => (
+const ValueResources = ({ data }) => (
   <Layout>
     <h1>Resources</h1>
     {data.values.edges.map(({ node }, index) => (
@@ -51,4 +53,4 @@ query ResourceQuery($searchValue: Int = 1)
 }
 `
 
-export default Resources
+export default ValueResources

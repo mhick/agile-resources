@@ -8,6 +8,7 @@ import Layout from '../components/layout'
 import Manifesto from '../components/manifesto'
 import Signers from '../components/signers'
 import Principles from './principles'
+import ValueResources from './values'
 
 const App = ({ children }) => <Layout children={children} />
 
@@ -28,6 +29,7 @@ render(
     <App path="/">
       <Home path="/" />
       <Principles path="principles" />
+      <ValueResources path="values/:valueId" />
     </App>
   </Router>,
   document.getElementById('___gatsby')
@@ -51,6 +53,7 @@ export const query = graphql`
       edges {
         node {
           id
+          value
           greaterValue
           lesserValue
         }

@@ -21,7 +21,7 @@ const Manifesto = ({ values }) => (
               <strong>{node.greaterValue}</strong> over {node.lesserValue}
             </div>
             <div className="level-right is-size-6">
-              <Link to="resources">Resources</Link>
+              <Link to={"values/" + node.value}>Resources</Link>
             </div>
           </div>
         ))}
