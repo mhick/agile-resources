@@ -10,9 +10,11 @@ import Layout from '../components/layout'
 
 const Value = ({ data }) => (
   <Layout>
-    <h1>Value</h1>
     {data.values.edges.map(({ node }, index) => (
-        <p key={node.id}>{node.greaterValue}</p>
+        <div className="section">
+          <h1 className="title">Value {node.value}</h1>
+          <h2 key={node.id} className="subtitle">{node.greaterValue} over {node.lesserValue}</h2>
+        </div>
       ))}
     <ol>
       {data.resources.edges.map(({ node }, index) => (
