@@ -8,9 +8,9 @@ import { Link, graphql } from 'gatsby'
 
 import Layout from '../components/layout'
 
-const Value = ({ props, data }) => (
+const Value = ({ data }) => (
   <Layout>
-    <h1>Value {props.valueId}</h1>
+    <h1>Value</h1>
     {data.values.edges.map(({ node }, index) => (
         <p key={node.id}>{node.greaterValue}</p>
       ))}
@@ -24,8 +24,8 @@ const Value = ({ props, data }) => (
 )
 
 export const query = graphql`
-query ResourceQuery($searchValue: Int = 1)
-{resources:allResourcesYaml(filter: {values: {in: [$searchValue]}}) {
+query ResourceQuery($valueId: Int = 1)
+{resources:allResourcesYaml(filter: {values: {in: [$valueId]}}) {
   edges {
     node {
       id
@@ -40,7 +40,7 @@ query ResourceQuery($searchValue: Int = 1)
     }
   }
 }
-  values:allValuesYaml(filter: {value: {eq:$searchValue} },limit:1) {
+  values:allValuesYaml(filter: {value: {eq:$valueId} },limit:1) {
     edges {
       node {
         id
