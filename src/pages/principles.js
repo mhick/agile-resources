@@ -3,7 +3,7 @@ import { Link, graphql } from 'gatsby'
 
 import Layout from '../components/layout'
 
-const PrinciplesPage = ({ data }) => (
+const Principles = ({ data }) => (
   <Layout>
     <h1>Twelve Principles of Agile Software</h1>
     <p>
@@ -12,7 +12,7 @@ const PrinciplesPage = ({ data }) => (
     </p>
     <ol>
       {data.allPrinciplesYaml.edges.map(({ node }, index) => (
-        <li>{node.text}</li>
+        <li key={node.id}>{node.text}</li>
       ))}
     </ol>
     <Link to="/">Return to Agile Manifesto</Link>
@@ -24,6 +24,7 @@ export const query = graphql`
     allPrinciplesYaml {
       edges {
         node {
+          id
           text
         }
       }
@@ -31,4 +32,4 @@ export const query = graphql`
   }
 `
 
-export default PrinciplesPage
+export default Principles

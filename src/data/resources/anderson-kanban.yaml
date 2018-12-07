@@ -5,6 +5,7 @@ author:
   given: David
 summary: "Kanban is becoming a popular way to visualize and limit work-in-progress in software development and information technology work. Teams around the world are adding kanban around their existing processes to catalyze cultural change and deliver better business agility. This book answers the questions: What is Kanban? Why would I want to use Kanban? How do I go about implementing Kanban? How do I recognize improvement opportunities and what should I do about them?"
 values: 
+  - 1
   - 3
   - 4
 principles: 

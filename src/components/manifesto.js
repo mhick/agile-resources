@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'gatsby'
 
 const Manifesto = ({ values }) => (
   <div className="container">
@@ -15,13 +16,14 @@ const Manifesto = ({ values }) => (
       <p>Through this work we have come to value:</p>
       <div className="section">
         {values.map(({ node }, index) => (
-              <div className="level" key={node.index}>
-                <div className="level-left">
-                  <strong>{node.greaterValue}</strong> over {node.lesserValue}
-                </div>
-                <div className="level-right is-size-6">Resources</div>
-              </div>
-
+          <div className="level" key={node.id}>
+            <div className="level-left">
+              <strong>{node.greaterValue}</strong> over {node.lesserValue}
+            </div>
+            <div className="level-right is-size-6">
+              <Link to={"values/" + node.value}>Resources</Link>
+            </div>
+          </div>
         ))}
       </div>
       <p>

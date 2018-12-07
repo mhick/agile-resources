@@ -2,7 +2,7 @@
 General:
   [x] Add CSS Framework
   [] Choose license
-  [] Update README
+  [x] Update README
     - purpose
     - ecosystem
 
@@ -21,7 +21,7 @@ Styling:
   [] Principles (bulma tiles?)
 
 Function:
-  [] Query resources by value
+  [x] Query resources by value
   [] Query resources by principle
   [] Query resources by label
   [] Amazon affiliate link
@@ -30,3 +30,6 @@ Data:
   [] Create Author/Signer schema
   [] Set up YAML validation
   [] Feed amazon affiliate code to amazon links
+  [] Generate resources from pinboard bookmarks
+  [x] Generate resource pages from values
+    [] Then from principles
