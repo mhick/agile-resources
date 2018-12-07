@@ -11,13 +11,14 @@ import Layout from '../components/layout'
 const Value = ({ data }) => (
   <Layout>
     {data.values.edges.map(({ node }, index) => (
-        <div className="section">
+        <div key={node.id} className="section">
           <h1 className="title">Value {node.value}</h1>
-          <h2 key={node.id} className="subtitle">{node.greaterValue} over {node.lesserValue}</h2>
+          <h2 className="subtitle">{node.greaterValue} over {node.lesserValue}</h2>
         </div>
       ))}
     <ol>
-      {data.resources.edges.map(({ node }, index) => (
+      {data.resources &&
+        data.resources.edges.map(({ node }, index) => (
         <li key={node.id}>{node.name}</li>
       ))}
     </ol>
@@ -26,7 +27,7 @@ const Value = ({ data }) => (
 )
 
 export const query = graphql`
-query ResourceQuery($valueId: Int = 1)
+query ResourceQuery($valueId: Int)
 {resources:allResourcesYaml(filter: {values: {in: [$valueId]}}) {
   edges {
     node {
