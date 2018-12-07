@@ -30,3 +30,6 @@ Data:
   [] Create Author/Signer schema
   [] Set up YAML validation
   [] Feed amazon affiliate code to amazon links
+  [] Generate resources from pinboard bookmarks
+  [] Generate resource pages from values
+    [] Then from principles
